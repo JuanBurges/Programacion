@@ -1,18 +1,23 @@
 package problemas;
 
+/**
+ * Esto es un programa que te da un array de numeros
+ * @author yo y mi
+ * @version v1.0
+ */
 public class Conjunto {
 	
 	final static int MAX_ELEMETOS = 100;
 	private Integer[]tabla = new Integer[MAX_ELEMETOS];
 	
-	/*Vacia el conjunto de elementos*/
+	/*<h2>Vacia el conjunto de elementos*/
 	public void vaciar( ) {
 		for (int i=0;i<tabla.length;i++){
 			tabla[i]= null;
 		}
 	}
 	
-	/*Agrega conjunto de elementos*/
+	/*<h2>Agrega conjunto de elementos</2>*/
 	public boolean agregar(int x ) {
 		if(esMiembro(x)) {
 			return false;
@@ -26,7 +31,7 @@ public class Conjunto {
 		return false;
 	}
 	
-	/*Elimina conjunto de elementos*/
+	/*<h2>Elimina conjunto de elementos</2>*/
 	public boolean eliminar(int x ) {
 		if (! esMiembro(x)) {
 			return false;
@@ -41,7 +46,7 @@ public class Conjunto {
 		return false;
 	}
 	
-	/*Copia conjunto de elementos*/
+	/*<h2>Copia conjunto de elementos</2>*/
 	public void copiar(Conjunto c) {
 		for (int i=0; i<c.tabla.length;i++) {
 			if(c.tabla[i]!=null) {
@@ -52,7 +57,7 @@ public class Conjunto {
 	}
 	
 	
-	/*Comprueba si ya tiene ese elemento que se le pasa*/
+	/*<h2>Comprueba si ya tiene ese elemento que se le pasa</2>*/
 	public boolean esMiembro (Integer x) {
 		for (int i =0 ;i<tabla.length;i++) {
 			if (tabla[i] != null && tabla[i].equals(x)){
@@ -62,7 +67,7 @@ public class Conjunto {
 		return false;
 	}
 	
-	/*Dice si es igual un conjunto de elementos*/
+	/*<h2>Dice si es igual un conjunto de elementos</2>*/
 	public boolean esIgual(Conjunto c) {
 		for (int i=0;i<tabla.length;i++) {
 			if(tabla[i]!= null) {
@@ -75,7 +80,7 @@ public class Conjunto {
 	}
 
 	
-	/*Iprime conjunto de elementos*/
+	/*<h2>Iprime conjunto de elementos</2>*/
 	public String imprimir( ) {
 		String respuesta= "";
 		for (int i =0;i<tabla.length;i++) {
@@ -86,7 +91,7 @@ public class Conjunto {
 	}
 }
 
-/* Para simplificar dice en las posiciones si hay o no con elementos.
+/* <h3>Para simplificar dice en las posiciones si hay o no con elementos.
 private int posicion(int x) {
 	for (int i =0 ;i<tabla.length;i++) {
 		if (tabla[i] != null && tabla[i].equals(x)){
@@ -94,4 +99,4 @@ private int posicion(int x) {
 		}
 	}
 	return -1;
-}*/
+}</3>*/
